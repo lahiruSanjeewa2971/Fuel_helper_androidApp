@@ -4,12 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -18,6 +22,8 @@ public class fuel_station_owner_dashboard extends AppCompatActivity implements N
     NavigationView navigationView;
     Toolbar toolbar;
     ImageView imageView;
+    CardView cardView01, cardView02;
+    TextView newFuelStationText, fuelStationList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,14 @@ public class fuel_station_owner_dashboard extends AppCompatActivity implements N
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        cardView01 = findViewById(R.id.cardView01);
+        cardView02 = findViewById(R.id.cardView02);
+
+        newFuelStationText = findViewById(R.id.newFuelStationText);
+        fuelStationList = findViewById(R.id.listOfAllFuelStations);
+
+        cardView01.setBackgroundResource(R.drawable.box01);
+        cardView02.setBackgroundResource(R.drawable.box01);
 
         setSupportActionBar(toolbar);
 
@@ -35,6 +49,22 @@ public class fuel_station_owner_dashboard extends AppCompatActivity implements N
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        newFuelStationText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent01 = new Intent(fuel_station_owner_dashboard.this, add_new_fuel_station.class);
+                startActivity(intent01);
+            }
+        });
+
+        fuelStationList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent02 = new Intent(fuel_station_owner_dashboard.this, view_all_fuel_stations.class);
+                startActivity(intent02);
+            }
+        });
     }
 
     @Override
