@@ -25,7 +25,7 @@
         android:layout_height="233dp"
         android:layout_marginTop="36dp"
         android:layout_marginBottom="299dp"
-        android:src="@drawable/fuel_icon_02"
+        android:src="@drawable/main_menu_background"
         android:transitionName="splash_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

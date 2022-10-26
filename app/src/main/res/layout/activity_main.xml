@@ -35,26 +35,28 @@
         android:src="@drawable/login_draw" />
 
     <EditText
+        android:id="@+id/editTextEmailLogin"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:paddingLeft="20dp"
-        android:hint="Email"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:layout_marginTop="30dp"
-        android:background="@drawable/input"/>
+        android:background="@drawable/input"
+        android:hint="Email"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <EditText
+        android:id="@+id/editTextPasswordLogin"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:paddingLeft="20dp"
-        android:hint="Password"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:layout_marginTop="30dp"
-        android:background="@drawable/input"/>
+        android:background="@drawable/input"
+        android:hint="Password"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <TextView
         android:layout_width="match_parent"
